@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ККалькулятор - Площадь поверхности конуса.</title>
+<title>Калькулятор - Площадь поверхности конуса.</title>
 </head>
 <body>
-<h1>Калькулятор - Площадь поверхности конуса.</h1>>
+<h1>Калькулятор - Площадь поверхности конуса.</h1>
     <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
         <label for="first">Радиус:</label>
         <input type="text" name="first" id="first" value="${first}">
