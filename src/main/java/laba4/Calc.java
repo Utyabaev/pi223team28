@@ -39,8 +39,8 @@ public class Calc extends HttpServlet {
 		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) {
 			request.setAttribute("first_result", radius_calc);
 			request.setAttribute("second_result", obr_calc);
-			int first_try;
-			int second_try;
+			double first_try;
+			double second_try;
 			double pi = 3.14;
 			try { 
 			first_try=Integer.parseInt(radius_calc);
