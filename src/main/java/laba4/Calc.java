@@ -43,8 +43,8 @@ public class Calc extends HttpServlet {
 			double second_try;
 			double pi = 3.14;
 			try { 
-			first_try=Integer.parseInt(radius_calc);
-			second_try=Integer.parseInt(obr_calc);
+			first_try=Double.parseDouble(radius_calc);
+			second_try=Double.parseDouble(obr_calc);
 			}
 			catch (NumberFormatException e) {
 				first_try=0;
