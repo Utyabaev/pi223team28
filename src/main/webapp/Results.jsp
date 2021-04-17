@@ -7,11 +7,11 @@
 <title>Результаты вычисления</title>
 </head>
 <body>
-<h1>Результаты вычисления</h1>
-<h2>Ваши введеные данные:</h2>
-<p><strong>Радиус:</strong> ${first_result}</p>
-<p><strong>Образующая:</strong> ${second_result}</p>
-<p><strong>Результат:</strong> ${result}</p>
+<h1>Результаты вычисления (мм)</h1>
+<h2>Ваши введеные данные (мм):</h2>
+<p><strong>Радиус (мм):</strong> ${first_result}</p>
+<p><strong>Образующая (мм):</strong> ${second_result}</p>
+<p><strong>Результат (мм):</strong> ${result}</p>
 
 <form action="${pageContext.request.contextPath}/Form.jsp">
     <input type="submit" name="sign" value="Назад">
