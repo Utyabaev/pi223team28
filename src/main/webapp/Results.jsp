@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Результаты вычисления</title>
 </head>
-<body>
+<body> 
 <h1>Результаты вычисления</h1>
 <h2>Ваши введеные данные:</h2>
 <p><strong>Радиус:</strong> ${first_result}</p>
