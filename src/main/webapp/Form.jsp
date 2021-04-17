@@ -9,9 +9,9 @@
 <body>
 <h1>Калькулятор - Площадь поверхности конуса.</h1>
     <form action="${pageContext.request.contextPath}/JavaCalc" method="post">
-        <label for="first">Радиус:</label>
+        <label for="first">Радиус (мм):</label>
         <input type="text" name="first" id="first" value="${first}">
-        <label for="second">Образующая: </label>
+        <label for="second">Образующая (мм): </label>
         <input type="text" name="second" id="second" value="${second}">
         <input type="submit" name="sign" value="Calculate">
     </form>
