@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Результаты вычисления</title>
 </head>
-<body>
+<body> 
 <h1>Результаты вычисления (мм)</h1>
 <h2>Ваши введеные данные (мм):</h2>
 <p><strong>Радиус (мм):</strong> ${first_result}</p>
