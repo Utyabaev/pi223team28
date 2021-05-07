@@ -14,49 +14,7 @@ public class Calc extends JFrame {
     JCheckBox card_y, card_n, leaflets, b_cards;
     boolean test;
     
-    public static double calc_bcards(int tiraj, int paper, int phormat, int lam, int ang, int type, int dis){
-    	double price = 0;
-    	if (paper == 1) {
-    		price +=1;
-    	}
-    	if (paper == 2) {
-    		price +=5;
-    	}
-    	if (paper == 3) {
-    		price +=2;
-    	}
-    	if (paper == 4) {
-    		price +=6;
-    	}
-    	if (phormat == 1) {
-    		price +=10;
-    	}
-    	if (phormat == 2) {
-    		price +=9;
-    	}
-    	if (lam == 1) {
-    		price +=40;
-    	}
-    	if (ang == 1) {
-    		price +=30;
-    	}
-    	if (type == 1) {
-    		price +=9;
-    	}
-    	if (type == 2) {
-    		price +=4;
-    	}
-    	if (type == 3) {
-    		price +=3;
-    	}
-    	if (type == 4) {
-    		price +=1;
-    	}
-    	if (dis == 1) {
-    		price -= price * 0.15;
-    	}
-    	return price * tiraj;
-    }
+    
     
     public Calc() {
 
@@ -571,21 +529,7 @@ public class Calc extends JFrame {
                 	double rezz1 = (paper_leaflets_val + phormat_leaflets_val + perforation_val + type_leaflets_val) * tiraj_val;
                     double rez1 = rezz1 - rezz1 * discount;
                     String rez1_value = ""+rez1;
-                    try {
-                        FileWriter writer = new FileWriter("Результат.txt");
-                        writer.write("Листовки: " +
-                        		"\nТираж: " + tiraj_val + 
-                        		"\nСтоимость бумаги: " + paper_leaflets_val + 
-                        		"\nСтоимость формата: " + phormat_leaflets_val + 
-                        		"\nСтоимость перфорации: " + perforation_val + 
-                        		"\nСтоимость типа: " + type_leaflets_val +
-                        		"\nСкидка: " + discount + 
-                        		"\nЦена: " + rez1_value);
-                        writer.close();
-                    } catch(IOException ex) {
-                        ex.printStackTrace();
-                    }
-                    result.setText(rez1_value+" Рублей");
+                    
                     discount = 0;
                     mn_size_leaflets = 0;
                     return;
@@ -595,22 +539,7 @@ public class Calc extends JFrame {
                 	double rezz2 = (paper_bcards_val + phormat_bcards_val + type_bcards_val + lam_val + ang_val) * tiraj_val;
                     double rez4 = rezz2 - rezz2 * discount;
                     String rez4_value = ""+rez4;
-                    try {
-                        FileWriter writer = new FileWriter("Результат.txt");
-                        writer.write("Визитки" + 
-                        		"\nТираж: " + tiraj_val + 
-                        		"\nСтоимость бумаги: " + paper_bcards_val + 
-                        		"\nСтоимость формата: " + phormat_bcards_val + 
-                        		"\nСтоимость типа: " + type_bcards_val + 
-                        		"\nСтоимость ламинации: " + lam_val + 
-                        		"\nСтоимость скругления углов: " + ang_val +
-                        		"\nСкидка: " + discount + 
-                        		"\nЦена: " + rez4_value);
-                        writer.close();
-                    } catch(IOException ex) {
-                        ex.printStackTrace();
-                    }
-                    result.setText(rez4_value+" Рублей");
+                   
                     discount = 0;
                     mn_size_bcards = 0;
                     return;
@@ -636,17 +565,6 @@ public class Calc extends JFrame {
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     }
-    public static void main(String[] args) { 
-    	Runnable runnable = new Runnable()
-    	{
-    			@Override
-    			public void run()
-    			{	
-    			new Calc();
-    			}
-    			};
-    			EventQueue.invokeLater(runnable);
-    			
-    			}
+
     
     }
